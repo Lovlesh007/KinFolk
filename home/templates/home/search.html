@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<i><h1 style="text-align: center;">Search result of {{show}}</h1></i>
+	<br>
+	<br>
+	<br>
+	<br>
+	<i><form style="text-align: center; font-size: 30px;">
+	{% if result %}
+	{% for r in result %}
+	{{r}}
+	<br/><br/>
+	{% endfor %}
+	{% else %}
+	<h3>No match Found!!!!</h3>
+	{% endif %}
+	</form></i>
+</body>
+</html>

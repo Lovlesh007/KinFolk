@@ -1,0 +1,38 @@
+<!doctype html>
+<title>Site Maintenance</title>
+<style>
+  body { text-align: center; padding: 150px; }
+  h1 { font-size: 50px; }
+  body { font: 20px Helvetica, sans-serif; color: #333; }
+  article { display: block; text-align: left; width: 650px; margin: 0 auto; }
+  a { color: #dc8100; text-decoration: none; }
+  a:hover { color: #333; text-decoration: none; }
+</style>
+
+<article>
+    <h1>FeedBack!</h1>
+    <div>
+      <form method="POST" class="form" action="#">
+
+      {% csrf_token %}
+
+      Your name: <br>
+      <input type="text" name="realname"><br>
+      <br>
+
+      Your email: <br>
+      <input type="text" name="email"><br>
+      <br>
+
+      Your Mobile Number: <br>
+      <input type="text" name="Number"><br>
+      <br>
+
+      Your comments: <br>
+      <textarea name="comments" rows="15" cols="50"></textarea><br><br>
+
+      <input type="submit" value="Submit">
+ 
+</form>
+    </div>
+</article>

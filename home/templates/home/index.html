@@ -1,0 +1,253 @@
+{% load static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="title icon" href="{% static 'home/image/site_icon.png' %}">	
+<title>Easy Recharge a  Business Corporate Category Flat Bootstrap Responsive Website Template | Home</title>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/bootstrap.css' %}"/>
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/bootstrap.css">
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/style.css' %}"/>
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/style.css">
+ <link rel="stylesheet" type="text/css" media="all" href="../../static/home/css/animate.css">
+ <link rel="stylesheet" type="text/css" media="all" href="{% static 'home/css/animate.css' %}"/>
+
+
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Easy Recharge Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script src="../../static/home/js/jquery.min.js"></script>
+</head>
+<body>
+	
+<div class="banner">
+	<div class="header">
+			{% if user.is_authenticated %}
+			<!--<a href="{% url 'historyindex' %}" style="font-size: 20px;color: red;">History</a>-->
+			<a href="{% url 'historyindex' %}"><button type="button" class="btn btn-danger">History</button></a>
+			<font size="6" >Welcome {{request.user.username}}</font>
+			{% endif %}
+			<div class="logo">
+			 <h1><a href="#"><i><img src="{% static 'home/image/cell.png' %}" alt="IMG"></i>KinFolk	</a></h1>
+			</div>
+			<div class="top-nav">
+				<span class="menu"><img src="{% static 'home/image/menu.png' %}" alt="IMG"></span>
+				<ul class="nav1" class="active">
+					<li><a href="{% url 'child' %}">Child Adoption</a></li>
+					<li><a href="{% url 'elder' %}">Elders Adoption</a></li>
+					
+					{% if user.is_authenticated %}
+					<li><a href="javascript:{document.getElementById('logout').submit()}">Logout</a></li>
+					<form id="logout" method="POST" action="{% url 'logoutindex' %}" >
+					{% csrf_token %}
+					<input type="hidden">
+					</form>
+					{% else %}
+					<li><a href="{% url 'loginindex' %}">Login</a></li>
+					<li><a href="{% url 'registerindex' %}">Signup</a></li>
+					{% endif %}
+				</ul>
+						<!-- script-for-menu -->
+						 <script>
+						   $( "span.menu" ).click(function() {
+							 $( "ul.nav1" ).slideToggle( 300, function() {
+							 // Animation complete.
+							  });
+							 });
+						</script>
+						<!-- /script-for-menu -->
+			</div>
+			<!-- start search-->
+				    <div class="search-box">
+					    <div id="sb-search" class="sb-search">
+							<form method="GET" action="#">
+								<input class="sb-search-input" placeholder="Find Your Recharge..." type="search" name="search" id="search">
+								<input class="sb-search-submit" type="submit" value="">
+								<span class="sb-icon-search"> </span>
+							</form>
+						</div>
+				    </div>
+					<!-- search-scripts -->
+					<script src="../../static/home/js/classie.js"></script>
+
+
+					<script src="../../static/home/js/uisearch.js"></script>
+
+						<script>
+							new UISearch( document.getElementById( 'sb-search' ) );
+						</script>
+				<!-- //search-scripts -->
+				
+			
+			<div class="clearfix"> </div>
+	</div>
+	<div class="container">
+		{% if user.is_authenticated %}
+		<h3 style="text-align: right ;margin-right:-200px !important;"><a href="{% url 'password_change' %}"><button type="button" class="btn btn-primary">Change Password!!</button></a></h3>
+		{% endif %}
+		<div class="banner-info">
+			<h3>KinFolk</h3>
+			<center><p>Make Life Better</p></center>
+		</div>
+		<div class="buttons">
+			<ul>
+<li ><a class="hvr-shutter-in-vertical" href="{% url 'child' %}" style="border-radius:50px;">Child Adoption</a></li>
+<li><a class="hvr-shutter-in-vertical" href="{% url 'elder' %}"  style="border-radius:50px;" >Elders Adoption</a></li>
+<li><a class="hvr-shutter-in-vertical" href="{% url 'feedback' %}"  style="border-radius:50px;">FeedBack</a></li>
+			</ul>
+			
+		</div>
+	</div>
+</div>
+
+<div class="content-bottom">
+		<div class="btm-grids">
+			<div class="col-md-4 btm-grid back-col1 text-center">
+			<img src="{% static 'home/image/bbbb.jpg' %}" alt="IMG">
+
+			</div>
+			<div class="col-md-4 btm-grid btm-wid">
+				<h3>BUILD A FAMILY YOU NEVER HAD</h3>
+				<p>COMPLETE YOUR FAMILY</p>
+			</div>
+			<div class="col-md-4 btm-grid back-col2 text-center">
+				<img src="{% static 'home/image/bbb1.jpg' %}" alt="IMG">
+
+			</div>
+			<div class="clearfix"></div>
+		</div>
+</div>
+<div class="coupons">
+	<div class="container">
+		<div class="coupons-grids text-center">
+			<div class="col-md-3 coupons-gd">
+				<h3>ADOPTION IN <span>3 SIMPLE STEPS</span></h3>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/web.png' %}" alt="IMG"></span></h4>
+				<p>LOGIN TO YOUR ACCOUNT</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/credit.png' %}" alt="IMG"></span></h4>
+				<p>MAKE A MATCH</p>
+			</div>
+			<div class="col-md-3 coupons-gd">
+				<h4><span><img src="{% static 'home/image/security.png' %}" alt="IMG"></span></h4>
+				<p>ADOPT</p>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+<div class="content-bottom-two">
+		<div class="col-md-6 content-left text-center">
+		<img src="{% static 'home/image/bbb5.png' %}" alt="IMG">
+		</div>
+		<div class="col-md-6 content-right text-center">
+		<img src="{% static 'home/image/bbb3.png' %}" alt="IMG">
+		</div>
+		<div class="clearfix"></div>
+		<div class="btm-pos">
+			<h3>OUR OBJECTIVE</h3>
+			<p>We believe to give a heart warming
+				opportunity to the less fortunate
+				by bringing together the people 
+				who don't have a complete family, 
+				and bringing joy to them.  </p>
+		</div>
+</div>
+<div class="footer-top">
+	<div class="container">
+		<div class="foo-grids">
+			<div class="col-md-3 foo-grid">
+				<h3>Adoption</h3>
+				<ul>
+					<li><a href="#">Our Family</a></li>
+					<li><a href="#">Success Stories</a></li>
+					<li><a href="#">Gallery</a></li>
+					<li><a href="#">Feedback</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">FAQs</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>BRANCHES</h3>
+				<ul>
+					<li><a href="#">New Delhi</a></li>
+					<li><a href="#">Harayana</a></li>
+					<li><a href="#">Uttar Pradesh</a></li>
+					<li><a href="#">Madhya Pradesh</a></li>
+					<li><a href="#">Kerela</a></li>
+					<li><a href="#">Tamil Nadu</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>Developers</h3>
+				<ul>
+					<li><a href="#">Lovlesh Bhatt</a></li>
+					<li><a href="#">Riya</a></li>
+					<li><a href="#">Rishabh</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 foo-grid">
+				<h3>PAYMENT OPTIONS</h3>
+				<ul>
+					<li>Credit Cards</li>
+					<li>Debit Cards</li>
+					<li>Any Visa Debit Card (VBV)</li>
+					<li>Direct Bank Debits</li>
+					<li>Cash Cards</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>	
+</div>
+
+<div class="footer">
+	<div class="container">
+		<h2><a href="index.html">Easy Adoption in Seconds</a></h2>
+		<p>© {% now 'Y' %} Topup. All Rights Reserved | Design by <a href="mailto:lovleshbhatt@gmail.com">Lovlesh Bhatt</a></p>
+		<ul>
+			<li><a class="face1" href="#"></a></li>
+			<li><a class="face2" href="mailto:lovleshbhatt@gmail.com"></a></li>
+			<li><a class="face3" href="#"></a></li>
+			<li><a class="face4" href="#"></a></li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- for bootstrap working -->
+
+	<script src="../../static/home/js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+</body>
+</html>

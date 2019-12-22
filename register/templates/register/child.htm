@@ -1,0 +1,39 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>DETAILS FORM:</title>
+</head>
+<body>
+  <h4 style="text-align: center;">
+  {% if warning %}
+  {{warning}}
+  {% endif %} 
+</h4>
+  <h>Details Form</h>
+  <br><br>
+<form method="GET" class="form" action="{% url 'searchindex' %}">
+        
+        {% csrf_token %}
+    
+        <b>Select Gender</b> 
+        <select name="Religion">
+        <option>Male</option>
+        <option>Female</option>
+        </select>
+        <br><br>
+         <b>Select Age Group</b> 
+        <select name="Religion">
+        <option>Between 2 to 5</option>
+        <option>Between 5 to 10</option>
+        <option>Between 10 to 15</option>
+        <option>Between 15 to 20</option>
+        </select>
+       
+       <input type="search" name="search" placeholder="Write here">
+       <input type="submit">     
+
+
+
+  </form>
+  </body>
+</html>

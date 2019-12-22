@@ -1,0 +1,50 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>DETAILS FORM:</title>
+</head>
+<body>
+  <h4 style="text-align: center;">
+  {% if warning %}
+  {{warning}}
+  {% endif %} 
+</h4>
+  <h>Details Form</h>
+  <br><br>
+<form method="POST" class="form" action="{% url 'personal' %}">
+        
+        {% csrf_token %}
+    
+         Aadhar no.:<br>
+         <input type="text" name="aadhar">
+         <br>
+         DOB:<br>
+        <input type="date" name="DOB">
+        <br>
+        <b>RELIGION</b> 
+        Select Operator:
+        <select name="Religion">
+        <option>Hindu</option>
+        <option>Muslim</option>
+        <option>Christian</option>
+        <option>Sikh</option>
+        <option>Others</option>
+        </select>
+        Address:<br>
+         <input type="text" name="Address">
+         <br>
+          Annual Income:<br>
+         <input type="text" name="Annual_Income">
+         <br>
+          Occupation:<br>
+         <input type="text" name="Occupation">
+         <br>
+       
+          <br><br> 
+        <input type="submit" value="Submit"> 
+
+
+
+  </form>
+  </body>
+</html>
